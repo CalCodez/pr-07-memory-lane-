@@ -1,0 +1,24 @@
+/* ++TABLET STYLES */
+@media screen and (max-width: 1024px) {
+}
+
+/* ++MOBILE STYLES */
+@media screen and (max-width: 768px) {
+	.intro-header {
+		font-size: 2rem;
+	}
+}
+
+/* ++Mini MOBILE STYLES */
+@media screen and (max-width: 468px) {
+	.intro-summary {
+		text-align: justify;
+		word-spacing: 0;
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.intro-header {
+		font-size: 1.5rem;
+	}
+}

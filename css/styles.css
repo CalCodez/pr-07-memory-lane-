@@ -1,0 +1,229 @@
+.hero-section,
+.content-section {
+	flex-direction: column;
+	text-align: center;
+	margin: 10px 0 20px 0;
+}
+
+.content-section {
+	border: 1px outset var(--black);
+	box-shadow: 1px 1px 1px 1px var(--black);
+	width: 80%;
+	margin-top: 20px;
+}
+
+.intro-img-container {
+	width: 30%;
+	height: 50%;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid var(--project-color-red-dark);
+	box-shadow: 2px 2px 15px 2px var(--project-color-red);
+	outline: var(--ol);
+}
+
+.intro-img-container > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	outline: var(--ol);
+}
+
+.intro-header {
+	font-size: 3.5rem;
+	color: var(--project-color-gold);
+	text-shadow: 2px 2px 2px var(--black);
+}
+
+.content-headers {
+	font-size: 2rem;
+	color: var(--project-color-gold);
+	text-shadow: 2px 2px 3px var(--black);
+	font-weight: 600;
+}
+
+.intro-summary,
+.content-summary {
+	display: flex;
+	place-self: center;
+	width: 80%;
+	color: var(--project-color-gold);
+	font-weight: 600;
+	font-size: 20px;
+	flex-direction: column;
+	line-height: 1.5;
+	word-spacing: 1.5;
+	text-shadow: 2px 2px 2px var(--black);
+}
+
+.content-summary {
+	color: var(--project-color-red);
+}
+
+.enter-btn-container {
+	height: fit-content;
+	width: fit-content;
+	margin: 10px 0;
+}
+
+.fromHome-enter-btn {
+	background-color: var(--project-color-black);
+	color: var(--project-color-red-dark);
+	font-weight: 600;
+	font-size: 1.5rem;
+	text-shadow: 2px 2px 2px var(--black);
+	border: 2px outset var(--black);
+	box-shadow: 2px 2px 6px 0.5px var(--project-color-red-dark);
+	width: 150px;
+	height: 45px;
+	place-content: center;
+	border-radius: 10px;
+}
+
+/* !!Summary Page */
+
+.s3 button {
+	background-color: red;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.s3 button a {
+	width: 100%;
+	height: 100px;
+	border: 15px groove goldenrod;
+	border-radius: 150px;
+	font-size: 30px;
+	background-color: red;
+	color: gold;
+}
+.sumPages2 {
+	margin-top: 80px;
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+	gap: 50px;
+}
+
+.sp-pic {
+	border: 5px ridge red;
+	border-radius: 50%;
+}
+
+.sp-pic img {
+	border: 5px ridge goldenrod;
+	border-radius: 50%;
+
+	width: 550px;
+	height: auto;
+}
+
+.spS3 {
+	display: flex;
+	flex-direction: row;
+	place-content: center;
+	justify-content: space-evenly;
+	gap: 80px;
+	margin-top: 80px;
+}
+
+.spNav button {
+	width: 100px;
+	height: 50px;
+	border: 2px inset red;
+	border-radius: 20%;
+	background-color: black;
+}
+
+.spNav button:hover {
+	width: 100px;
+	height: 50px;
+	border: 2px outset goldenrod;
+	border-radius: 20%;
+	background-color: black;
+	color: goldenrod;
+}
+
+.spNav a {
+	font-size: 20px;
+	text-decoration: none;
+	color: red;
+}
+
+.spNav a:hover {
+	color: goldenrod;
+	font-size: 22px;
+	text-decoration: underline;
+}
+
+.spNav {
+	margin-bottom: 80px;
+}
+
+/* **Tirgger Page */
+
+.vps2 {
+	display: flex;
+	justify-content: center;
+}
+.tp-s1 img {
+	border: 5px solid red;
+	border-radius: 60%;
+}
+
+/* ??NOTE Trigger page continer button same configeration as homepage enter button */
+
+/* !!Suecide Prevention */
+#su-preventionBody {
+	background-color: rgb(117, 53, 169);
+	height: 100%;
+}
+
+#su-preventionBody h1,
+.su-prevention a {
+	color: rgb(50, 204, 209);
+}
+
+.spreven-container {
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	border: 15px ridge rgb(50, 204, 209);
+}
+
+.spreven-container p {
+	font-size: 30px;
+	color: goldenrod;
+	text-align: center;
+	line-height: 2;
+}
+
+.spreven-container a {
+	color: rgb(50, 204, 209);
+	font-size: 20px;
+}
+
+.p-viewButton {
+	display: flex;
+	place-content: center;
+	margin-top: 80px;
+	margin-bottom: 400px;
+}
+
+.p-viewButton div {
+	margin-bottom: 10px;
+	border: 2px groove goldenrod;
+	border-radius: 80px;
+	margin-top: 50px;
+}
+
+.viewbtn {
+	display: flex;
+	background-color: rgb(50, 204, 209);
+	font-size: 20px;
+	color: rgb(117, 53, 169);
+	place-items: center;
+	padding: 30px;
+	border-radius: 80px;
+	border: 2px groove goldenrod;
+}

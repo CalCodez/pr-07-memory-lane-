@@ -1,0 +1,200 @@
+
+/* ++Vidoe Page */
+/* **Navagation Buttons */
+
+.vpNav{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: center;
+margin-top: 80px;
+margin-bottom: 60px;
+width: 100%;
+
+}
+.vpNav-container{
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+
+}
+
+
+
+
+
+.vpNav button{
+  width:100px;
+  height:50px;
+border: 5px inset goldenrod;
+border-radius: 20%;
+background-color:black;
+
+}
+.vpNav button{
+  width:120px;
+}
+
+.vpNav button:hover{
+border: 2px ridge red;
+}
+
+.vpNav a{
+  font-size: 20px;
+  color: goldenrod;
+  text-decoration: underline overline red;
+
+}
+
+.vpNav a:hover{
+  color: red;;
+  font-size: 20px;
+  text-decoration: underline overline;
+  text-decoration-color: goldenrod;
+
+}
+
+
+
+
+
+
+
+
+
+
+.vpS2{
+ display: flex;
+ place-content: center;
+}
+.vp-sectionS3{
+display: flex;
+flex-direction:row;
+gap: 100px;
+margin-top: 80px;
+}
+.vp-div{
+  border: 3px solid goldenrod;
+  display: flex;
+flex-direction: row;
+justify-items: center;
+align-items: center;
+width: 500px;
+text-align: center;
+
+}
+
+.vp-div ul li{
+  display: flex;
+  gap: 20px;
+}
+
+.vp-div a{
+  color: red;
+  list-style: none;
+  text-align: center;
+  font-size: 30px;
+}
+
+.graphic-video{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+
+ /* ++Video page Sections */
+
+ .hero-header nav a:hover{
+  color:goldenrod;
+ }
+
+.yearJump {
+color: goldenrod;
+ }
+
+table, th, tr,td{
+  border: 2px groove red;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.p2018Container{
+  font-size: 50px;
+  color: goldenrod;
+}
+
+ .vp2018, .vp2021, .vp2023{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+margin-top: 60px;
+border: 5px groove yellow;
+gap: 50px;
+max-width: 80%;
+ }
+
+ .sps1  h1{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 40px;
+ }
+
+
+ .vp2018 div, .vp2021 div, .vp2023 div{
+  border: 2px solid goldenrod;
+  margin: 20px 0;
+ }
+
+ .vp2020, .vp2022{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+margin-top: 60px;
+border: 5px groove goldenrod;
+gap: 50px;
+
+ }
+
+ .vp2020 div, .vp2022 div{
+  border: 2px solid red;
+  margin: 20px 0;
+ }
+
+ .vp-div a:hover{
+color:goldenrod;
+ }
+
+
+
+ /* !!Graphic Vidoe Page */
+ /* ?? GRAPHIC VIDOEO PAGE  */
+.gvs1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  gap: 30px;
+}
+
+.gvSaySum{
+  color: white;
+  font-size: 40px;
+  border-color: red;
+}
+.graphic-videoContainer{
+  border: 10px ridge goldenrod;
+  border-radius: 40px;
+  margin-bottom: 60px;
+}
+
+.graphic-videoContainer video{
+  border-radius: 40px;
+  border: 2px groove red;
+
+}

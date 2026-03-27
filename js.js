@@ -19,39 +19,95 @@ const flexInactive = 'flex-inactive';
 
 const videoButton = [
 	{
-		year: '2014',
+		year: '2018',
 		videos: [
-			{ number: 'one', href: '#' },
-			{ number: 'Two', href: '#' },
-			{ number: 'Three', href: '#' },
-			{ number: 'Four', href: '#' },
-			{ number: 'Five', href: '#' },
+			{ label: 'One', href: 'https://www.facebook.com' },
+			{ label: 'Two', href: '#' },
+			{ label: 'Three', href: '#' },
+			{ label: 'Four', href: '#' },
+			{ label: 'Five', href: '#' },
 		],
+	},
+	{
+		year: '2020',
+		videos: [
+			{ label: 'One', href: '#' },
+			{ label: 'Two', href: '#' },
+			{ label: 'Three', href: '#' },
+			{ label: 'Four', href: '#' },
+			{ label: 'Five', href: '#' },
+		],
+	},
+	{
+		year: '2021',
+		videos: [
+			{ label: 'One', href: '#' },
+			{ label: 'Two', href: '#' },
+			{ label: 'Three', href: '#' },
+			{ label: 'Four', href: '#' },
+			{ label: 'Five', href: '#' },
+		],
+	},
+
+	{
+		year: '2022',
+		videos: [
+			{ label: 'One', href: '#' },
+			{ label: 'Two', href: '#' },
+			{ label: 'Three', href: '#' },
+			{ label: 'Four', href: '#' },
+			{ label: 'Five', href: '#' },
+		],
+	},
+
+	{
+		year: '2023',
+		videos: [
+			{ label: 'One', href: '#' },
+			{ label: 'Two', href: '#' },
+			{ label: 'Three', href: '#' },
+			{ label: 'Four', href: '#' },
+			{ label: 'Five', href: '#' },
+		],
+	},
+
+	{
+		year: '2026',
+		videos: [{ label: 'one', href: '#' }],
+	},
+
+	{
+		year: '2014',
+		videos: [{ label: 'one', href: '#' }],
 	},
 ];
 
-const [one, two, three, four, five, six] = videoButton;
+const [one, two, three, four, five, six, seven] = videoButton;
 const videoYearBtns = selectAll('.video-year-select-btns');
 const [oneBtn, twoBtn, threeBtn, fourBtn, fiveBtn, sixBtn] = videoYearBtns;
 
 //!!Generate View Videos Button Functions
 
-const parent = getById('view-videos-container');
-const viewVideoBtns = 'view-video-btn';
-const videoYearDisplay = getById('video-year-display');
-
 function generateVideoLinkButton(button, obj) {
+	const parent = getById('view-videos-container');
+	const viewVideoBtns = 'view-video-btn';
+	const videoYearDisplay = getById('video-year-display');
 	button.addEventListener(click, () => {
 		obj.videos.forEach((video) => {
-			video = createElement('a');
-			addClass(video, viewVideoBtns);
-			textContent(video, video.number);
-			video.href = video.href;
+			const videoLink = createElement('a');
 
+			addClass(videoLink, viewVideoBtns);
+
+			textContent(videoLink, video.label);
+			videoLink.href = video.href;
+			console.log(video.label);
 			textContent(videoYearDisplay, obj.year);
-			appendChild(parent, video);
+			appendChild(parent, videoLink);
 		});
 	});
 }
 
 generateVideoLinkButton(oneBtn, one);
+
+//Create a function that clears out the view videos container when selecting a new year(set of) videos to view.
+//Attempt to mka the generateVideoLinkButton function a call back function

@@ -31,83 +31,110 @@ const videoButton = [
 	{
 		year: '2020',
 		videos: [
-			{ label: 'One', href: '#' },
-			{ label: 'Two', href: '#' },
-			{ label: 'Three', href: '#' },
-			{ label: 'Four', href: '#' },
-			{ label: 'Five', href: '#' },
+			{ label: 'Six', href: '#' },
+			{ label: 'Seven', href: '#' },
+			{ label: 'Eight', href: '#' },
+			{ label: 'Nine', href: '#' },
+			{ label: 'Ten', href: '#' },
 		],
 	},
 	{
 		year: '2021',
 		videos: [
-			{ label: 'One', href: '#' },
-			{ label: 'Two', href: '#' },
-			{ label: 'Three', href: '#' },
-			{ label: 'Four', href: '#' },
-			{ label: 'Five', href: '#' },
+			{ label: 'Eleven', href: '#' },
+			{ label: 'Twelve', href: '#' },
+			{ label: 'Thirteen', href: '#' },
+			{ label: 'Fourteen', href: '#' },
+			{ label: 'Fifteen', href: '#' },
 		],
 	},
 
 	{
 		year: '2022',
 		videos: [
-			{ label: 'One', href: '#' },
-			{ label: 'Two', href: '#' },
-			{ label: 'Three', href: '#' },
-			{ label: 'Four', href: '#' },
-			{ label: 'Five', href: '#' },
+			{ label: 'Sixteen', href: '#' },
+			{ label: 'Seventeen', href: '#' },
+			{ label: 'Eighteen', href: '#' },
+			{ label: 'Nineteen', href: '#' },
+			{ label: 'Twenty', href: '#' },
 		],
 	},
 
 	{
 		year: '2023',
 		videos: [
-			{ label: 'One', href: '#' },
-			{ label: 'Two', href: '#' },
-			{ label: 'Three', href: '#' },
-			{ label: 'Four', href: '#' },
-			{ label: 'Five', href: '#' },
+			{ label: 'Twenty-one', href: '#' },
+			{ label: 'Twenty-two', href: '#' },
+			{ label: 'Twenty-three', href: '#' },
+			{ label: 'Twenty-four', href: '#' },
+			{ label: 'Twenty-five', href: '#' },
 		],
 	},
 
 	{
 		year: '2026',
-		videos: [{ label: 'one', href: '#' }],
+		videos: [{ label: '2026', href: '#' }],
 	},
 
 	{
 		year: '2014',
-		videos: [{ label: 'one', href: '#' }],
+		videos: [{ label: 'Graphic', href: '#' }],
 	},
 ];
-
-const [one, two, three, four, five, six, seven] = videoButton;
-const videoYearBtns = selectAll('.video-year-select-btns');
-const [oneBtn, twoBtn, threeBtn, fourBtn, fiveBtn, sixBtn] = videoYearBtns;
 
 //!!Generate View Videos Button Functions
 
 function generateVideoLinkButton(button, obj) {
+	const activeParent = 'isActive';
 	const parent = getById('view-videos-container');
 	const viewVideoBtns = 'view-video-btn';
 	const videoYearDisplay = getById('video-year-display');
 	button.addEventListener(click, () => {
-		obj.videos.forEach((video) => {
-			const videoLink = createElement('a');
+		if (!parent.classList.contains(activeParent)) {
+			obj.videos.forEach((video) => {
+				addClass(parent, activeParent);
 
-			addClass(videoLink, viewVideoBtns);
+				const videoLink = createElement('a');
 
-			textContent(videoLink, video.label);
-			videoLink.href = video.href;
-			console.log(video.label);
-			textContent(videoYearDisplay, obj.year);
-			appendChild(parent, videoLink);
-		});
+				addClass(videoLink, viewVideoBtns);
+
+				textContent(videoLink, video.label);
+				videoLink.href = video.href;
+				textContent(videoYearDisplay, obj.year);
+				appendChild(parent, videoLink);
+			});
+		} else if (parent.classList.contains(activeParent)) {
+			console.log(parent);
+			parent.replaceChildren();
+			removeClass(parent, activeParent);
+			obj.videos.forEach((video) => {
+				addClass(parent, activeParent);
+
+				const videoLink = createElement('a');
+
+				addClass(videoLink, viewVideoBtns);
+
+				textContent(videoLink, video.label);
+				videoLink.href = video.href;
+				textContent(videoYearDisplay, obj.year);
+				appendChild(parent, videoLink);
+			});
+		}
 	});
 }
 
-generateVideoLinkButton(oneBtn, one);
+const [year2018, year2020, year2021, year2022, year2023, year2026, year2014] = videoButton;
+//++Video Year Buttons
+const videoYearBtns = selectAll('.video-year-select-btns');
+const [btn2018, btn2020, btn2021, btn2022, btn2023, btn2026, btn2014] = videoYearBtns;
+
+generateVideoLinkButton(btn2018, year2018);
+generateVideoLinkButton(btn2020, year2020);
+generateVideoLinkButton(btn2021, year2021);
+generateVideoLinkButton(btn2022, year2022);
+generateVideoLinkButton(btn2023, year2023);
+generateVideoLinkButton(btn2026, year2026);
+generateVideoLinkButton(btn2014, year2014);
 
 //Create a function that clears out the view videos container when selecting a new year(set of) videos to view.
 //Attempt to mka the generateVideoLinkButton function a call back function

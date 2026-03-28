@@ -72,14 +72,32 @@
 }
 
 .year-btns-container {
-	justify-content: space-around;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	height: auto;
+	gap: 20px;
+	margin-top: 50px;
 }
 
 .video-year-select-btns {
 	width: 120px;
 	height: 40px;
 	box-shadow: 2px 2px 2px 2px var(--black);
-	background: linear-gradient(90deg, var(--project-color-gold), var(--project-color-red-dark));
+	background: linear-gradient(90deg, var(--project-color-black-light), var(--project-color-black));
+	color: var(--project-color-red-dark);
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-shadow: 2px 2px 2px var(--black);
+	border-radius: 2px;
+}
+
+.video-year-select-btns:hover {
+	transform: scale(1.1);
+	background: linear-gradient(90deg, var(--project-color-black), var(--project-color-black-light));
+	transition: all ease-in 0.2s;
+	border-radius: 8px;
+	cursor: pointer;
+	color: var(--project-color-gold);
 }
 
 .video-year-display {
@@ -87,17 +105,26 @@
 	font-weight: 600;
 	font-size: 1.2rem;
 	box-shadow: 2px 2px 2px 2px var(--black);
-	outline: var(--ol);
-	margin: 20px;
-	font-size: 2rem;
+	margin: 40px;
+	font-size: 2.5rem;
 	text-shadow: 2px 2px 3px var(--black);
+	background: linear-gradient(
+		90deg,
+		var(--project-color-red-dark),
+		var(--project-color-black-light),
+		var(--project-color-black),
+		var(--project-color-black-light),
+		var(--project-color-red-dark)
+	);
 }
 
 .view-videos-container {
 	height: auto;
 	width: 100%;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	padding: 8px;
+	flex-wrap: wrap;
+	gap: 20px;
 	background: linear-gradient(var(--project-color-black-light), var(--project-color-black));
 }
 
@@ -110,8 +137,14 @@
 	text-shadow: 2px 2px 2px var(--black);
 	background-color: var(--project-color-red-dark);
 	box-shadow: 2px 2px 2px 2px var(--black);
-
 	border-radius: 3px;
+}
+
+.view-video-btn:hover {
+	transform: scale(1.1);
+	transition: all ease-in 0.2s;
+	border-radius: 8px;
+	background: linear-gradient(90deg, var(--project-color-red-dark), var(--project-color-gold));
 }
 
 .vps2 {

@@ -13,12 +13,13 @@
 }
 
 .intro-img-container {
-	width: 30%;
+	width: 20%;
 	height: 50%;
 	border-radius: 50%;
 	overflow: hidden;
-	border: 2px solid var(--project-color-red-dark);
-	box-shadow: 2px 2px 15px 2px var(--project-color-red);
+	border: 2px solid var(--project-color-gold);
+	box-shadow: 2px 2px 5px 2px var(--project-color-gold);
+	margin-bottom: 20px;
 }
 
 .intro-img-container > img {
@@ -32,6 +33,7 @@
 	font-size: 3.5rem;
 	color: var(--project-color-gold);
 	text-shadow: 2px 2px 2px var(--black);
+	margin-bottom: 30px;
 }
 
 .content-headers {

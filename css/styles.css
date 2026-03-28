@@ -61,6 +61,10 @@
 }
 
 /* **Video Page */
+.video-page-nav {
+	height: 50px;
+	margin-top: 20px;
+}
 
 .video-year-description-container {
 	justify-self: center;
@@ -100,21 +104,26 @@
 	color: var(--project-color-gold);
 }
 
+#activeButton {
+	background: var(--project-color-gold);
+	color: var(--project-color-red-dark);
+	text-shadow: 1px 1px 1px var(--black);
+}
+
 .video-year-display {
 	color: var(--project-color-gold);
 	font-weight: 600;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	box-shadow: 2px 2px 2px 2px var(--black);
 	margin: 40px;
 	font-size: 2.5rem;
 	text-shadow: 2px 2px 3px var(--black);
 	background: linear-gradient(
 		90deg,
-		var(--project-color-red-dark),
 		var(--project-color-black-light),
 		var(--project-color-black),
-		var(--project-color-black-light),
-		var(--project-color-red-dark)
+		var(--project-color-black),
+		var(--project-color-black-light)
 	);
 }
 

@@ -78,9 +78,14 @@ const videoButton = [
 
 	{
 		year: '2014',
-		videos: [{ label: 'Graphic', href: '#' }],
+		videos: [{ label: 'Graphic', href: './triggerPage.html' }],
 	},
 ];
+
+const [year2018, year2020, year2021, year2022, year2023, year2026, year2014] = videoButton;
+//++Video Year Buttons
+const videoYearBtns = selectAll('.video-year-select-btns');
+const [btn2018, btn2020, btn2021, btn2022, btn2023, btn2026, btn2014] = videoYearBtns;
 
 //!!Generate View Videos Button Functions
 
@@ -92,6 +97,7 @@ function generateVideoLinkButton(button, obj) {
 	button.addEventListener(click, () => {
 		if (!parent.classList.contains(activeParent)) {
 			obj.videos.forEach((video) => {
+				button.id = 'activeButton'; //(adds the css activeButton styles )
 				addClass(parent, activeParent);
 
 				const videoLink = createElement('a');
@@ -104,10 +110,17 @@ function generateVideoLinkButton(button, obj) {
 				appendChild(parent, videoLink);
 			});
 		} else if (parent.classList.contains(activeParent)) {
+			for (let buttonId of videoYearBtns) {
+				if (buttonId.id == 'activeButton') {
+					buttonId.removeAttribute('id'); //(removes the css activeButton styles )
+				}
+			}
 			console.log(parent);
 			parent.replaceChildren();
 			removeClass(parent, activeParent);
 			obj.videos.forEach((video) => {
+				button.id = 'activeButton'; //(adds the css activeButton styles )
+
 				addClass(parent, activeParent);
 
 				const videoLink = createElement('a');
@@ -122,11 +135,6 @@ function generateVideoLinkButton(button, obj) {
 		}
 	});
 }
-
-const [year2018, year2020, year2021, year2022, year2023, year2026, year2014] = videoButton;
-//++Video Year Buttons
-const videoYearBtns = selectAll('.video-year-select-btns');
-const [btn2018, btn2020, btn2021, btn2022, btn2023, btn2026, btn2014] = videoYearBtns;
 
 generateVideoLinkButton(btn2018, year2018);
 generateVideoLinkButton(btn2020, year2020);

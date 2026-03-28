@@ -19,7 +19,6 @@
 	overflow: hidden;
 	border: 2px solid var(--project-color-red-dark);
 	box-shadow: 2px 2px 15px 2px var(--project-color-red);
-	outline: var(--ol);
 }
 
 .intro-img-container > img {
@@ -156,59 +155,61 @@
 	background: linear-gradient(90deg, var(--project-color-red-dark), var(--project-color-gold));
 }
 
-/* **Trigger Warning Page */
-
-/* !!Suecide Prevention */
-#su-preventionBody {
-	background-color: rgb(117, 53, 169);
+/* !!Suicide Prevention */
+.suicide-prevention-body {
+	background-color: var(--suicide-purple);
 	height: 100%;
 }
 
-#su-preventionBody h1,
-.su-prevention a {
-	color: rgb(50, 204, 209);
-}
-
-.spreven-container {
-	display: flex;
-	flex-direction: column;
-	place-items: center;
-	border: 15px ridge rgb(50, 204, 209);
-}
-
-.spreven-container p {
-	font-size: 30px;
-	color: goldenrod;
-	text-align: center;
+.suicide-prevention-body .content-headers {
+	color: var(--suicide-turquoise);
+	font-size: 2rem;
+	text-decoration: 2px underline var(--suicide-turquoise);
 	line-height: 2;
 }
-
-.spreven-container a {
-	color: rgb(50, 204, 209);
-	font-size: 20px;
+.suicide-prevention-body .nav-container {
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: space-evenly;
+	margin-top: 20px;
 }
 
-.p-viewButton {
-	display: flex;
-	place-content: center;
-	margin-top: 80px;
-	margin-bottom: 400px;
+.suicide-prevention-body .nav-container .nav-btns {
+	background-color: var(--suicide-turquoise);
+	color: var(--black);
+	box-shadow: 1px 1px 1px 2px var(--black);
+	height: 35px;
+	font-size: 18px;
+	border-radius: 3px;
+	text-shadow: 1px 1px 1px 1px var(--black);
 }
 
-.p-viewButton div {
-	margin-bottom: 10px;
-	border: 2px groove goldenrod;
-	border-radius: 80px;
-	margin-top: 50px;
+.suicide-prevention-body .suicide-prevention-wrapper {
+	flex-direction: column;
+	border: 2px outset var(--suicide-turquoise);
+	box-shadow: 2px 2px 2px 2px var(--suicide-turquoise);
+	width: 95%;
 }
 
-.viewbtn {
-	display: flex;
-	background-color: rgb(50, 204, 209);
-	font-size: 20px;
-	color: rgb(117, 53, 169);
-	place-items: center;
-	padding: 30px;
-	border-radius: 80px;
-	border: 2px groove goldenrod;
+.suicide-prevention-body .suicide-prevention-wrapper .nav-container {
+	flex-direction: column;
+	gap: 0;
+}
+
+.suicide-prevention-body .suicide-prevention-wrapper .nav-container .nav-btns {
+	width: fit-content;
+	height: fit-content;
+	padding: 3px;
+}
+
+.suicide-prevention-wrapper .content-summary {
+	color: var(--project-color-gold);
+}
+
+.suicide-prevention-wrapper .intro-img-container {
+	border-radius: 0;
+	box-shadow: 2px 2px 2px 1px var(--black);
+	border-color: var(--suicide-turquoise);
+	width: 50%;
+	height: 50%;
 }

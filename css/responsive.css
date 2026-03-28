@@ -1,23 +1,31 @@
 /* ++TABLET STYLES */
-@media screen and (max-width: 1024px) {
+@media (max-width: 1024px) {
 }
 
 /* ++MOBILE STYLES */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 	.intro-header {
 		font-size: 2rem;
 	}
 }
 
 /* ++Mini MOBILE STYLES */
-@media screen and (max-width: 468px) {
+@media (max-width: 468px) {
 	.intro-summary {
 		text-align: justify;
 		word-spacing: 0;
 	}
+
+	.suicide-prevention-body .content-summary {
+		font-size: 1rem;
+	}
+
+	.suicide-prevention-wrapper {
+		width: 100%;
+	}
 }
 
-@media screen and (max-width: 321px) {
+@media (max-width: 321px) {
 	.intro-header {
 		font-size: 1.5rem;
 	}

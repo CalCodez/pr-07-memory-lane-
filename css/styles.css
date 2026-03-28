@@ -156,16 +156,7 @@
 	background: linear-gradient(90deg, var(--project-color-red-dark), var(--project-color-gold));
 }
 
-.vps2 {
-	display: flex;
-	justify-content: center;
-}
-.tp-s1 img {
-	border: 5px solid red;
-	border-radius: 60%;
-}
-
-/* ??NOTE Trigger page continer button same configeration as homepage enter button */
+/* **Trigger Warning Page */
 
 /* !!Suecide Prevention */
 #su-preventionBody {

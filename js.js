@@ -99,14 +99,18 @@ function generateVideoLinkButton(button, obj) {
 			obj.videos.forEach((video) => {
 				button.id = 'activeButton'; //(adds the css activeButton styles )
 				addClass(parent, activeParent);
+				textContent(videoYearDisplay, obj.year);
 
 				const videoLink = createElement('a');
-
 				addClass(videoLink, viewVideoBtns);
-
 				textContent(videoLink, video.label);
 				videoLink.href = video.href;
-				textContent(videoYearDisplay, obj.year);
+
+				const playIcon = createElement('i');
+				addClass(playIcon, 'fa-solid');
+				addClass(playIcon, 'fa-play');
+
+				appendChild(videoLink, playIcon);
 				appendChild(parent, videoLink);
 			});
 		} else if (parent.classList.contains(activeParent)) {
@@ -115,21 +119,23 @@ function generateVideoLinkButton(button, obj) {
 					buttonId.removeAttribute('id'); //(removes the css activeButton styles )
 				}
 			}
-			console.log(parent);
 			parent.replaceChildren();
 			removeClass(parent, activeParent);
 			obj.videos.forEach((video) => {
 				button.id = 'activeButton'; //(adds the css activeButton styles )
-
 				addClass(parent, activeParent);
+				textContent(videoYearDisplay, obj.year);
 
 				const videoLink = createElement('a');
-
 				addClass(videoLink, viewVideoBtns);
-
 				textContent(videoLink, video.label);
 				videoLink.href = video.href;
-				textContent(videoYearDisplay, obj.year);
+
+				const playIcon = createElement('i');
+				addClass(playIcon, 'fa-solid');
+				addClass(playIcon, 'fa-play');
+
+				appendChild(videoLink, playIcon);
 				appendChild(parent, videoLink);
 			});
 		}

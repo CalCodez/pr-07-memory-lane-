@@ -6,6 +6,14 @@
 }
 
 .content-section {
+	padding-top: 20px;
+}
+
+.hero-section {
+	outline: var(--ol);
+}
+
+.content-section {
 	border: 1px outset var(--black);
 	box-shadow: 1px 1px 1px 1px var(--black);
 	width: 80%;

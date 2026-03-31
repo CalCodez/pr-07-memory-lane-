@@ -1,12 +1,37 @@
 /* ++TABLET STYLES */
 @media (max-width: 1024px) {
+	.header-container,
+	.hero-section,
+	.content-section {
+		width: 95%;
+	}
+
+	.intro-img-container {
+		width: 280px;
+		height: 280px;
+	}
+
+	.intro-header {
+		font-size: 3rem;
+	}
 }
 
 /* ++MOBILE STYLES */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
+	.nav-container {
+		display: none;
+	}
+
+	.fa-bars {
+		visibility: visible;
+	}
+
 	.intro-header {
 		font-size: 2rem;
 	}
+}
+
+@media (max-width: 768px) {
 }
 
 /* ++Mini MOBILE STYLES */

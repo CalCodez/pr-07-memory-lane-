@@ -15,8 +15,57 @@ const keyup = 'keyup';
 const flexActive = 'flex-active';
 const flexInactive = 'flex-inactive';
 
-//++Video Page
+//**Mobile Menu Function */
+function toggleMobileMenu(toggle, menu) {
+	const menuActive = 'menu-active';
 
+	toggle.addEventListener(click, () => {
+		if (!menu.classList.contains(menuActive)) {
+			toggleClass(menu, menuActive);
+
+			for (let elm of menu.children) {
+				setTimeout(() => {
+					elm.style.visibility = 'visible';
+				}, 200);
+			}
+		} else {
+			if (menu.classList.contains(menuActive)) {
+				for (let elm of menu.children) {
+					elm.style.visibility = 'hidden';
+				}
+				toggleClass(menu, menuActive);
+			}
+		}
+	});
+
+	for (let elm of menu.children) {
+		elm.addEventListener(click, () => {
+			if (menu.classList.contains(menuActive)) {
+				toggleClass(menu, menuActive);
+
+				for (let self of menu.children) {
+					self.style.visibility = 'hidden';
+				}
+			}
+		});
+	}
+	window.addEventListener(keyup, (e) => {
+		if (e.key == 'Escape' && menu.classList.contains(menuActive)) {
+			toggleClass(menu, menuActive);
+
+			for (let elm of menu.children) {
+				elm.style.visibility = 'hidden';
+			}
+		}
+	});
+}
+
+const mobileMenuToggle = getById('mobile-menu-toggle');
+const summaryPageMenu = getById('mobile-menu');
+
+toggleMobileMenu(mobileMenuToggle, summaryPageMenu);
+
+//++Video Page
 const videoButton = [
 	{
 		year: '2018',

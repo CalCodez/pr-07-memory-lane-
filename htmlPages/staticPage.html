@@ -15,19 +15,32 @@
 		<link rel="stylesheet" href="/css/styles.css" />
 		<link rel="stylesheet" href="/css/responsive.css" />
 		<link rel="stylesheet" href="/css/animation.css" />
+
+		<script src="/js.js" defer></script>
 	</head>
 
 	<body>
-		<!-- **Hero Section -->
-		<section class="content-section container">
-			<h2 class="intro-header">Calvin Cortez Colbert</h2>
-			<h2 class="content-summary">This Is The Static Page</h2>
-			<nav class="nav-container container">
+		<div class="header-container container">
+			<div class="header-img-container container">
+				<img src="/assets/CalToonPics/img1.jpg" alt="Calvin Colbert Ai Generate Image" />
+			</div>
+
+			<nav class="nav-container video-page-nav container">
 				<a class="nav-btns" href="/index.html">HOME</a>
-				<a class="nav-btns" href="./summaryPage.html">SUMMARY</a>
-				<a class="nav-btns" href="./videoPage.html">VIDEOS</a>
+				<a class="nav-btns" href="/htmlPages/summaryPage.html">SUMMARY</a>
+				<a class="nav-btns" href="/htmlPages/staticPage.html">STATIC</a>
 			</nav>
+
+			<i id="mobile-menu-toggle" class="fa-solid fa-bars"></i>
+			<nav id="mobile-menu" class="mobile-nav-container container">
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="./videoPage.html">Videos</a></li>
+				<li><a href="./staticPage.html">Static</a></li>
+			</nav>
+		</div>
+
+		<section class="content-section container">
+			<h2 class="intro-header">Static Page</h2>
 		</section>
-		<section class="content-section"></section>
 	</body>
 </html>

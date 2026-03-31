@@ -1,89 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Videos</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="/css/default.css" />
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/default.css">
+		<link rel="stylesheet" href="/css/styles.css" />
+		<link rel="stylesheet" href="/css/responsive.css" />
 
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+		<link rel="stylesheet" href="/css/animation.css" />
+		<script src="/js.js" defer></script>
+	</head>
 
-    <link rel="stylesheet" href="/css/animation.css">
-    <script src="/js.js" defer></script>
-  </head>
+	<body>
+		<div class="header-container container">
+			<div class="header-img-container container">
+				<img src="/assets/CalToonPics/img1.jpg" alt="Calvin Colbert Ai Generate Image" />
+			</div>
 
-  <body>
-    <section class="content-section container">
-      <nav class="nav-container video-page-nav container">
-      <a class="nav-btns" href="/index.html">HOME</a>
-      <a class="nav-btns" href="/htmlPages/summaryPage.html">SUMMARY</a>
-      <a class="nav-btns" href="/htmlPages/staticPage.html">STATIC</a>
-    </nav>
+			<nav class="nav-container video-page-nav container">
+				<a class="nav-btns" href="/index.html">HOME</a>
+				<a class="nav-btns" href="/htmlPages/summaryPage.html">SUMMARY</a>
+				<a class="nav-btns" href="/htmlPages/staticPage.html">STATIC</a>
+			</nav>
 
-      <div class="intro-img-container">
-        <img src="/assets/CalToonPics/img1.jpg" alt="Calvin Colbert Ai Generate Image">
-      </div>
-      <P class="content-summary"> So as one can probably imagine. All the shit I had been going through over the years.
-        A nigga was always under some type of pressure. Form the mistreatment and unfairness that life was handing out
-        or dealing with assholes from all walks of life. This that and the third.
-        <br>
+			<i id="mobile-menu-toggle" class="fa-solid fa-bars"></i>
+			<nav id="mobile-menu" class="mobile-nav-container container">
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="./videoPage.html">Videos</a></li>
+				<li><a href="./staticPage.html">Static</a></li>
+			</nav>
+		</div>
 
-        I had to come up with some type of way to deal with it all. and one of those ways was either rambling in a
-        journal <q>Mainly talking about the same shit over and over</q> and another way was to just pull out my phone
-        and... well talk to it..
-      </P>
-    </section>
+		<section class="content-section container">
+			<h2 class="intro-header">Videos</h2>
 
+			<p class="content-summary">
+				So as one can probably imagine. All the shit I had been going through over the years. A
+				nigga was always under some type of pressure. Form the mistreatment and unfairness that life
+				was handing out or dealing with assholes from all walks of life. This that and the third.
+				<br />
 
+				I had to come up with some type of way to deal with it all. and one of those ways was either
+				rambling in a journal <q>Mainly talking about the same shit over and over</q> and another
+				way was to just pull out my phone and... well talking to it..
+			</p>
+		</section>
 
-    <section class="content-section video-container">
-      <div class="video-year-description-container container content-section">
-        <p class="content-summary">Choose a year to see a list of random rant videos. Each Year Has a different number
-          of videos about a bunch of random different shit all under the same umbrella.</p>
-      </div>
+		<section class="content-section video-container">
+			<div class="video-year-description-container container content-section">
+				<p class="content-summary">
+					Choose a year to see a list of random rant videos. Each Year Has a different number of
+					videos about a bunch of random different shit all under the same umbrella.
+				</p>
+			</div>
 
-      <div class="year-btns-container container">
-        <button  class="video-year-select-btns selected">2018</button>
-        <button class="video-year-select-btns">2020</button>
-        <button class="video-year-select-btns">2021</button>
-        <button class="video-year-select-btns">2022</button>
-        <button class="video-year-select-btns">2023</button>
-        <button class="video-year-select-btns">2026</button>
-        <button class="video-year-select-btns">2014</button>
-      </div>
+			<div class="year-btns-container container">
+				<button class="video-year-select-btns selected">2018</button>
+				<button class="video-year-select-btns">2020</button>
+				<button class="video-year-select-btns">2021</button>
+				<button class="video-year-select-btns">2022</button>
+				<button class="video-year-select-btns">2023</button>
+				<button class="video-year-select-btns">2026</button>
+				<button class="video-year-select-btns">2014</button>
+			</div>
 
-      <h2 id="video-year-display" class="video-year-display"></h2>
+			<h2 id="video-year-display" class="video-year-display"></h2>
 
-
-      <div id="view-videos-container" class="view-videos-container container">
-
-      </div>
-
-
-      </div>
-
-
-
-
-
-
-
-
-
-      </div>
-    </section>
-
-    <nav class="nav-container container">
-      <a class="nav-btns" href="/index.html">HOME</a>
-      <a class="nav-btns" href="/htmlPages/summaryPage.html">SUMMARY</a>
-
-      <a class="nav-btns" href="/htmlPages/staticPage.html">STAIC</a>
-    </nav>
-  </body>
-
+			<!-- Dynamic Container used with JS (DO NOT DELETE) -->
+			<div id="view-videos-container" class="view-videos-container container"></div>
+		</section>
+	</body>
 </html>

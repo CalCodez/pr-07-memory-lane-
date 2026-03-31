@@ -4,31 +4,45 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Graphic Vide | My 4th Suicide Attempt</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
 		<link rel="stylesheet" href="/css/default.css" />
 
 		<link rel="stylesheet" href="/css/styles.css" />
 		<link rel="stylesheet" href="/css/videopage.css" />
 		<link rel="stylesheet" href="/css/responsive.css" />
 		<link rel="stylesheet" href="/css/animation.css" />
+		<script src="/js.js" defer></script>
 	</head>
 
 	<body>
 		<!-- **Hero Section -->
-		<section class="content-section container">
-			<nav class="nav-container container">
-				<a class="nav-btns" href="/index.html">HOME</a>
-				<a class="nav-btns" href="./summaryPage.html">SUMMARY</a>
-				<a class="nav-btns" href="./staticPage.html">STATIC</a>
-				<a class="nav-btns" href="./videoPage.html">VIDEOS</a>
-			</nav>
-		</section>
+		<div class="header-container container">
+			<div class="header-img-container container">
+				<img src="/assets/CalToonPics/img1.jpg" alt="Calvin Colbert Ai Generate Image" />
+			</div>
 
-		<h2 class="content-headers">GRAPHIC VIDEO</h2>
+			<nav class="nav-container video-page-nav container">
+				<a class="nav-btns" href="/index.html">HOME</a>
+				<a class="nav-btns" href="/htmlPages/summaryPage.html">SUMMARY</a>
+				<a class="nav-btns" href="/htmlPages/staticPage.html">STATIC</a>
+			</nav>
+
+			<i id="mobile-menu-toggle" class="fa-solid fa-bars"></i>
+			<nav id="mobile-menu" class="mobile-nav-container container">
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="./videoPage.html">Videos</a></li>
+				<li><a href="./staticPage.html">Static</a></li>
+			</nav>
+		</div>
 
 		<section class="content-section">
+			<h2 class="content-headers">GRAPHIC VIDEO</h2>
+
 			<p class="content-summary">
 				So… by this point, I have had it. I had fucking had it! It wasn’t the following me around,
 				shit-talking, constant disrespect, or any of the fucked up aspects that came with the shit I
@@ -71,10 +85,9 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 					Graphic Video
 				</video>
 			</div>
-		</section>
 
-			<nav class="nav-container container">
-				<a id="enterBtn" class='nav-btns' href="./suicidePreventionPage.html">Continue</a>
+			<nav class="always-show-nav-container container">
+				<a id="enterBtn" class="nav-btns" href="./suicidePreventionPage.html">Continue</a>
 			</nav>
 		</section>
 	</body>

@@ -16,26 +16,35 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
           href="/css/responsive.css">
     <link rel="stylesheet"
           href="/css/animation.css">
+          <script src="/js.js" defer></script>
   </head>
 
   <body>
-    <h2 class="content-headers">TRIGGER WARNING</h2>
+    <div class="header-container container">
+			<div class="header-img-container container">
+				<img src="/assets/CalToonPics/img1.jpg" alt="Calvin Colbert Ai Generate Image" />
+			</div>
+
+			<nav class="nav-container video-page-nav container">
+				<a class="nav-btns" href="/index.html">HOME</a>
+				<a class="nav-btns" href="/htmlPages/summaryPage.html">SUMMARY</a>
+				<a class="nav-btns" href="/htmlPages/staticPage.html">STATIC</a>
+			</nav>
+
+			<i id="mobile-menu-toggle" class="fa-solid fa-bars"></i>
+			<nav id="mobile-menu" class="mobile-nav-container container">
+				<li><a href="/index.html">Home</a></li>
+				<li><a href="./videoPage.html">Videos</a></li>
+				<li><a href="./staticPage.html">Static</a></li>
+			</nav>
+		</div>
+
 
     <!-- **Hero Section -->
     <section class="content-section container">
-       <nav class="nav-container container">
-        <a class="nav-btns"
-           href="/index.html">HOME</a>
-        <a class="nav-btns"
-           href="./summaryPage.html">SUMMARY</a>
-        <a class="nav-btns"
-           href="./staticPage.html">STATIC</a>
-        <a class="nav-btns"
-           href="./videoPage.html">VIDEOS</a>
-      </nav>
+    <h2 class="content-headers">TRIGGER WARNING</h2>
 
       <div class="intro-img-container">
-
         <img src="https://i.etsystatic.com/10686721/r/il/48523b/3443874041/il_794xN.3443874041_g4lk.jpg"
              alt="stop sign">
       </div>
@@ -51,7 +60,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
-      <nav class="nav-container container">
+      <nav class="always-show-nav-container container">
         <a id="homeenterBtn"
         class="nav-btns"
            href="./suicidePreventionPage.html"">Continue</a>

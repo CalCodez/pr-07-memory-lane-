@@ -1,42 +1,3 @@
-.hero-section,
-.content-section {
-	flex-direction: column;
-	text-align: center;
-	margin: 10px 0 20px 0;
-}
-
-.content-section {
-	padding-top: 20px;
-}
-
-.hero-section {
-	outline: var(--ol);
-}
-
-.content-section {
-	border: 1px outset var(--black);
-	box-shadow: 1px 1px 1px 1px var(--black);
-	width: 80%;
-	margin-top: 20px;
-}
-
-.intro-img-container {
-	width: 20%;
-	height: 50%;
-	border-radius: 50%;
-	overflow: hidden;
-	border: 2px solid var(--project-color-gold);
-	box-shadow: 2px 2px 5px 2px var(--project-color-gold);
-	margin-bottom: 20px;
-}
-
-.intro-img-container > img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	outline: var(--ol);
-}
-
 .intro-header {
 	font-size: 3.5rem;
 	color: var(--project-color-gold);
@@ -195,6 +156,20 @@
 	height: 100%;
 }
 
+.suicide-prevention-body .fa-bars {
+	color: var(--suicide-turquoise);
+}
+
+.suicide-prevention-body .mobile-nav-container.mobile-nav-container.menu-active {
+	background: var(--suicide-purple);
+	box-shadow: 2px 2px 6px 0.5px var(--black);
+	background: radial-gradient(var(--suicide-purple), var(--suicide-turquoise));
+}
+
+.suicide-prevention-body .mobile-nav-container.menu-active > li > a {
+	color: var(--project-color-gold);
+}
+
 .suicide-prevention-body .content-headers {
 	color: var(--suicide-turquoise);
 	font-size: 2rem;
@@ -208,7 +183,8 @@
 	margin-top: 20px;
 }
 
-.suicide-prevention-body .nav-container .nav-btns {
+.suicide-prevention-body .nav-container .nav-btns,
+.suicide-nav-container .nav-btns {
 	background-color: var(--suicide-turquoise);
 	color: var(--black);
 	box-shadow: 1px 1px 1px 2px var(--black);
@@ -225,12 +201,12 @@
 	width: 95%;
 }
 
-.suicide-prevention-body .suicide-prevention-wrapper .nav-container {
+.suicide-prevention-body .suicide-prevention-wrapper .suicide-nav-container {
 	flex-direction: column;
 	gap: 0;
 }
 
-.suicide-prevention-body .suicide-prevention-wrapper .nav-container .nav-btns {
+.suicide-prevention-body .suicide-prevention-wrapper .suicide-nav-container .nav-btns {
 	width: fit-content;
 	height: fit-content;
 	padding: 3px;

@@ -232,6 +232,7 @@
 .static-page .mobile-nav-container.menu-active > li > a {
 	color: var(--static-gray);
 }
+.static-page .header-img-container,
 .static-page .nav-btns,
 .static-page .mobile-nav-container.menu-active {
 	box-shadow: 2px 2px 7px 0.2px var(--static-gray);
@@ -273,4 +274,55 @@
 	text-shadow: 2px 1px 2px var(--black);
 	line-height: 1.5;
 	letter-spacing: 1.3px;
+}
+
+.static-toggle-container {
+	width: 400px;
+	justify-content: space-around;
+	box-shadow: 1px 1px 8px 1px var(--static-gray);
+	color: var(--static-gray);
+	row-gap: 20px;
+}
+
+.static-toggle-container > h3 {
+	font-size: 1.5rem;
+}
+
+.static-toggle-wrapper {
+	width: 95%;
+	justify-content: space-evenly;
+}
+
+.static-toggle-container button {
+	height: 40px;
+	width: 120;
+	background: linear-gradient(var(--project-color-black-light), var(--project-color-black));
+	color: var(--static-gray);
+	font-size: 1rem;
+	box-shadow: 1px 1px 8px 1px var(--static-gray);
+	padding: 3px;
+	font-weight: 60;
+	border-radius: 8px;
+}
+
+.static-content-section {
+	transition: height ease-in 0.5s;
+}
+
+.static-content-header {
+	color: var(--static-gray);
+}
+
+.static-content-container {
+	display: none;
+}
+
+/* **Default Flex */
+
+.flex-active {
+	display: flex;
+}
+
+.flex-inactive {
+	display: none;
 }

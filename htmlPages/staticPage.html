@@ -17,6 +17,7 @@
 		<link rel="stylesheet" href="/css/animation.css" />
 
 		<script src="/js.js" defer></script>
+		<script src="/js/staticPage.js" defer></script>
 	</head>
 
 	<body class="static-page">
@@ -71,6 +72,34 @@
 			</div>
 		</section>
 
-		<section class="content-section container"></section>
+		<section class="content-section container static-toggle-container">
+			<h3>Category</h3>
+			<div class="static-toggle-wrapper container">
+				<button value="Stories" class="static-toggle-btns">Stories</button>
+				<button value="Images" class="static-toggle-btns">Images</button>
+				<button value="Research" class="static-toggle-btns">Research</button>
+			</div>
+		</section>
+		<section class="content-section static-content-section container">
+			<div class="static-content-header-container">
+				<h2 id="static-content-header" class="static-header">Stories</h2>
+			</div>
+
+			<div
+				id="static-stories-container"
+				class="content-section container static-content-container flex-active">
+				<p class="static-header">Stories</p>
+			</div>
+
+			<div id="static-images-container" class="content-section container static-content-container">
+				<p class="static-header">Images</p>
+			</div>
+
+			<div
+				id="static-research-container"
+				class="content-section container static-content-container">
+				<p class="static-header">Research</p>
+			</div>
+		</section>
 	</body>
 </html>

@@ -24,6 +24,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -71,7 +72,7 @@ li {
 	top: 14px;
 	right: 15px;
 	z-index: 2;
-	visibility: hidden;
+	/* visibility: hidden; */
 }
 
 .fa-bars:hover {
@@ -108,7 +109,7 @@ li {
 }
 
 .mobile-nav-container.menu-active {
-	height: 200px;
+	height: 240px;
 	width: 180px;
 	row-gap: 20px;
 	transition: height ease 0.2s;

@@ -163,6 +163,7 @@
 .suicide-prevention-body .mobile-nav-container.mobile-nav-container.menu-active {
 	background: var(--suicide-purple);
 	box-shadow: 2px 2px 6px 0.5px var(--black);
+	height: 260px;
 	background: radial-gradient(var(--suicide-purple), var(--suicide-turquoise));
 }
 

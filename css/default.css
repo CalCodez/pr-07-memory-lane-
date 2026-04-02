@@ -7,11 +7,12 @@
 	--project-color-black-light: #3f3d41;
 	--project-color-red: rgb(210, 23, 16);
 	--project-color-red-dark: #850001;
-
 	--project-color-gold: #bc985f;
 
 	--suicide-turquoise: #006c6c;
 	--suicide-purple: #6e226d;
+
+	--static-gray: #acada8;
 
 	--ol: 1px solid white;
 	--olB: 1px solid blue;
@@ -72,7 +73,7 @@ li {
 	top: 14px;
 	right: 15px;
 	z-index: 2;
-	visibility: hidden;
+	/* visibility: hidden; */
 }
 
 .fa-bars:hover {

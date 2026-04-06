@@ -334,12 +334,14 @@
 	height: 40px;
 	place-content: center;
 	padding: 8px;
+	background: var(--project-color-black);
 	border: 2px solid var(--black);
 	border-radius: 8px;
 	color: var(--static-gray);
 	font-weight: 600;
 	width: fit-content;
 	box-shadow: 2px 2px 5px 1px var(--static-gray);
+	cursor: pointer;
 }
 
 .story-content-wrapper {

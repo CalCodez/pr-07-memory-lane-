@@ -56,7 +56,19 @@ toggleStaticContainer(
 const stories = [
 	{
 		id: 'story1',
-		title: 'PlaceHolder',
+		title: 'Main Story',
+		story: `	(placeHolder) I once went on a road trip... it was like a five thousand miles to no
+							where... total head trip right. I was pushing my whip with little devils on my
+							shoulders. Sleep deprivation on a journey in search for peace of mind... Somehow
+							tweaked into mental destruction. I have yet to fine the words to call it. Funny
+							thing... it's some where in my mine but I've since been transformed into a horded of
+							thoughts and phrases I involuntary adopted and can't return to sender.'
+							(INSERT FULL STORY HERE)`,
+	},
+
+	{
+		id: 'story1',
+		title: 'Story One',
 		story: `	Mannn... it's like... I am not trying to walk around with mfs sounding off in my head
 							at will.. against mine at that... Iam NOT about to keep suffering in slience on shit
 							that I know for a fact I can 100% talk about being how they are 100% MY
@@ -64,14 +76,14 @@ const stories = [
 	},
 	{
 		id: 'story2',
-		title: 'PlaceHolder',
+		title: 'Story Two',
 		story: `I'm trapped in an mental asylum within my own cranium walls. Crazy part... I let it
 							happen and I'm plotting an escape. Casualties expected. 🤷‍♂️ I had nothing to do with
 							that (In the way)... Methods thing'`,
 	},
 	{
 		id: 'story3',
-		title: 'PlaceHolder',
+		title: 'Story Three',
 		story: `The last scream… Man look, at this point in this life of mine… I am mfn tired… wait…
 							have I said that before?... Hella. Really, you think I would be used to certain shit
 							at this point. But… there is just certain shit I'll never get used too. So rather than
@@ -223,34 +235,50 @@ const stories = [
 	},
 ];
 
-const { story1, story2, story3 } = stories;
+const [mainStory, story1, story2, story3] = stories;
 
-const storyBtns = selectAll('.chapter-btns');
-const [mainStory, story1Btn, story2Btn, story3Btn] = storyBtns;
+const storyBtns = selectAll('.story-btns');
+const [mainStoryBtn, story1Btn, story2Btn, story3Btn] = storyBtns;
 
 const storyContentWrapper = getById('story-content-wrapper');
-const mainStory = getById('mainStory');
+const mainStoryContainer = getById('mainStoryContainer');
 
-function toggleStory(btn, mainContainer, obj) {
+function generateStoryContainer(obj) {
+	const storyWrapper = createElement('div');
+	addClass(storyWrapper, 'static-story-wrapper');
+	addClass(storyWrapper, 'content-section');
+	addClass(storyWrapper, 'container');
+
+	const storyTitle = createElement('h2');
+	textContent(storyTitle, obj.title);
+
+	const story = createElement('p');
+	addClass(story, 'content-section');
+	textContent(story, obj.story);
+
+	appendChild(storyContentWrapper, storyWrapper);
+	appendChild(storyWrapper, storyTitle);
+	appendChild(storyWrapper, story);
+}
+
+function toggleStory(btn, storyObj) {
+	let test = generateStoryContainer(storyObj);
+
 	btn.addEventListener(click, () => {
-		if (btn.id === obj.id && !mainContainer.classList.contains(flexInactive)) {
-			toggleClass(mainContainer, flexInactive);
-			const storyWrapper = createElement('div');
-			addClass(storyWrapper, 'static-story-wrapper');
-			addClass(storyWrapper, 'content-section');
-			addClass(storyWrapper, 'container');
-
-			const storyTitle = createElement('h2');
-			textContent(storyTitle, obj.title);
-
-			const story = createElement('p');
-			textContent(story, obj.story);
-
-			appendChild(storyContentWrapper, storyWrapper);
-			appendChild(storyWrapper, storyTitle);
-			appendChild(storyWrapper, story);
+		if (btn.value !== 'mainStory' && !mainStoryContainer.classList.contains(flexInactive)) {
+			toggleClass(mainStoryContainer, flexInactive);
+			generateStoryContainer(storyObj);
+		} else if (btn.value !== 'mainStory' && mainStoryContainer.classList.contains(flexInactive)) {
+			storyContentWrapper.replaceChildren();
+			generateStoryContainer(storyObj);
+		} else if (btn.value === 'mainStory' && mainStoryContainer.classList.contains(flexInactive)) {
+			storyContentWrapper.replaceChildren();
+			generateStoryContainer(storyObj);
 		}
 	});
 }
 
+toggleStory(mainStoryBtn, mainStory);
 toggleStory(story1Btn, story1);
+toggleStory(story2Btn, story2);
+toggleStory(story3Btn, story3);

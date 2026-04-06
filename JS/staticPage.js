@@ -84,6 +84,12 @@ const stories = [
 	{
 		id: 'story3',
 		title: 'Story Three',
+		story: `This is the replacement text of the last scream`,
+	},
+
+	{
+		id: 'staticHeroText',
+		title: 'static hero text',
 		story: `The last scream… Man look, at this point in this life of mine… I am mfn tired… wait…
 							have I said that before?... Hella. Really, you think I would be used to certain shit
 							at this point. But… there is just certain shit I'll never get used too. So rather than
@@ -235,7 +241,7 @@ const stories = [
 	},
 ];
 
-const [mainStory, story1, story2, story3] = stories;
+const [mainStory, story1, story2, story3, static] = stories;
 
 const storyBtns = selectAll('.story-btns');
 const [mainStoryBtn, story1Btn, story2Btn, story3Btn] = storyBtns;
@@ -282,3 +288,7 @@ toggleStory(mainStoryBtn, mainStory);
 toggleStory(story1Btn, story1);
 toggleStory(story2Btn, story2);
 toggleStory(story3Btn, story3);
+
+//++Static Hero Text
+const staticHero = getById('static-hero-text');
+textContent(staticHero, static.story);

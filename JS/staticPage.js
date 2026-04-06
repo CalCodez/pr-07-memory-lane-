@@ -54,9 +54,8 @@ toggleStaticContainer(
 //++Stories Object
 
 const stories = [
-	{ id: 'story1', title: 'PlaceHolder', story: '' },
 	{
-		id: 'story2',
+		id: 'story1',
 		title: 'PlaceHolder',
 		story: `	Mannn... it's like... I am not trying to walk around with mfs sounding off in my head
 							at will.. against mine at that... Iam NOT about to keep suffering in slience on shit
@@ -64,14 +63,14 @@ const stories = [
 							experiences.... fucked up part is... wait... I do this with ease... Me!...`,
 	},
 	{
-		id: 'story3',
+		id: 'story2',
 		title: 'PlaceHolder',
 		story: `I'm trapped in an mental asylum within my own cranium walls. Crazy part... I let it
 							happen and I'm plotting an escape. Casualties expected. 🤷‍♂️ I had nothing to do with
 							that (In the way)... Methods thing'`,
 	},
 	{
-		id: 'story4',
+		id: 'story3',
 		title: 'PlaceHolder',
 		story: `The last scream… Man look, at this point in this life of mine… I am mfn tired… wait…
 							have I said that before?... Hella. Really, you think I would be used to certain shit
@@ -223,3 +222,35 @@ const stories = [
 							shit. Sheesh That All`,
 	},
 ];
+
+const { story1, story2, story3 } = stories;
+
+const storyBtns = selectAll('.chapter-btns');
+const [mainStory, story1Btn, story2Btn, story3Btn] = storyBtns;
+
+const storyContentWrapper = getById('story-content-wrapper');
+const mainStory = getById('mainStory');
+
+function toggleStory(btn, mainContainer, obj) {
+	btn.addEventListener(click, () => {
+		if (btn.id === obj.id && !mainContainer.classList.contains(flexInactive)) {
+			toggleClass(mainContainer, flexInactive);
+			const storyWrapper = createElement('div');
+			addClass(storyWrapper, 'static-story-wrapper');
+			addClass(storyWrapper, 'content-section');
+			addClass(storyWrapper, 'container');
+
+			const storyTitle = createElement('h2');
+			textContent(storyTitle, obj.title);
+
+			const story = createElement('p');
+			textContent(story, obj.story);
+
+			appendChild(storyContentWrapper, storyWrapper);
+			appendChild(storyWrapper, storyTitle);
+			appendChild(storyWrapper, story);
+		}
+	});
+}
+
+toggleStory(story1Btn, story1);

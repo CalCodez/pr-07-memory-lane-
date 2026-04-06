@@ -329,7 +329,7 @@
 	margin-bottom: 15px;
 }
 
-.chapter-container > a {
+.chapter-container > button {
 	width: 120px;
 	height: 40px;
 	place-content: center;
@@ -356,10 +356,45 @@
 	line-height: 1.5;
 	font-weight: 600;
 	text-shadow: 2px 3px 3px var(--black);
+	height: auto;
 }
 
 .static-story-wrapper > h2 {
 	margin-bottom: 15px;
+}
+
+.five-thousands-img-container {
+	width: 100%;
+	height: auto;
+	box-shadow: 2px 2px 5px 1px var(--static-gray);
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.five-thousand-img-wrapper {
+	height: 280px;
+	width: 180px;
+	flex-direction: column;
+	justify-content: space-around;
+	border: 3px outset var(--black);
+	box-shadow: 2px 3px 3px var(--static-gray);
+	padding: 5px;
+}
+
+.five-thousand-img-wrapper:hover {
+	transform: scale(1.5);
+	transition: all ease-in 0.5s;
+	background: linear-gradient(180deg, var(--black), var(--project-color-black), var(--static-gray));
+}
+.five-thousand-img-wrapper > img {
+	height: 230px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.five-thousand-img-wrapper > h5 {
+	color: var(--static-gray);
+	font-size: 1.2rem;
 }
 
 /* **Default Flex */

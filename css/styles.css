@@ -30,8 +30,28 @@
 	color: var(--project-color-red);
 }
 
-.summary-text {
+.summary-header {
+	margin-bottom: 15px;
+}
+
+.summary-sub-header {
+	font-size: 18px;
+	text-shadow: 2px 2px 2px var(--black);
+}
+
+.summary-questions > .content-summary:not(.opening-statement),
+.summary-spill {
 	text-align: left;
+	padding-left: 5px;
+}
+
+.summary-questions > .content-summary > em {
+	color: var(--static-gray);
+}
+
+q {
+	color: var(--project-color-gold);
+	width: fit-content;
 }
 
 /* **Video Page */

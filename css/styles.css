@@ -30,6 +30,10 @@
 	color: var(--project-color-red);
 }
 
+.summary-text {
+	text-align: left;
+}
+
 /* **Video Page */
 .video-page-nav {
 	height: 50px;

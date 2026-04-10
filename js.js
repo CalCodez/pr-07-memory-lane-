@@ -63,4 +63,6 @@ function toggleMobileMenu(toggle, menu) {
 const mobileMenuToggle = getById('mobile-menu-toggle');
 const summaryPageMenu = getById('mobile-menu');
 
-// toggleMobileMenu(mobileMenuToggle, summaryPageMenu);
+toggleMobileMenu(mobileMenuToggle, summaryPageMenu);
+
+//**Summary Page

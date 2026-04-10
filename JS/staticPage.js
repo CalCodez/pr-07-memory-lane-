@@ -67,22 +67,22 @@ const stories = [
 	},
 
 	{
-		id: 'story1',
+		id: 'story2',
 		title: 'Story One',
-		story: `	Mannn... it's like... I am not trying to walk around with mfs sounding off in my head
-							at will.. against mine at that... Iam NOT about to keep suffering in slience on shit
+		story: `Mannn... it's like... I am not trying to walk around with mfs sounding off in my head
+							at will.. against mine at that... Iam NOT about to keep suffering silence on shit
 							that I know for a fact I can 100% talk about being how they are 100% MY
 							experiences.... fucked up part is... wait... I do this with ease... Me!...`,
 	},
 	{
-		id: 'story2',
+		id: 'story3',
 		title: 'Story Two',
 		story: `I'm trapped in an mental asylum within my own cranium walls. Crazy part... I let it
 							happen and I'm plotting an escape. Casualties expected. 🤷‍♂️ I had nothing to do with
 							that (In the way)... Methods thing'`,
 	},
 	{
-		id: 'story3',
+		id: 'story4',
 		title: 'Story Three',
 		story: `This is the replacement text of the last scream`,
 	},
@@ -90,7 +90,7 @@ const stories = [
 	{
 		id: 'staticHeroText',
 		title: 'static hero text',
-		story: `Years of dealing with fuck shit, has be just years of dealing with fuck shit. But when the fuck shit has me got me  completely fucked up is a line. When you have to express to a mf... I DO NOT BELONG TO YOU... shit has gone to far.  And now comes the You gotta die, we got to delete you, you about to get jumped and a bunch of fuck shit that does not trump the prime issues. What you are doing to me is NOT ok and I dont like, I dont care you sent you! RETURN THE SENDER MF`,
+		story: `Years of dealing with fuck shit, has be just years of dealing with fuck shit. But when the fuck shit has me got me  completely fucked up is a line. When you have to express to a mf... I DO NOT BELONG TO YOU... shit has gone to far.  And now comes the You gotta die, we got to delete you, you about to get jumped and a bunch of fuck shit that does not trump the prime issues. What you are doing to me is NOT ok and I don't like, I don't care you sent you! RETURN THE SENDER MF`,
 	},
 ];
 
@@ -137,10 +137,10 @@ function toggleStory(btn, storyObj) {
 	});
 }
 
-toggleStory(mainStoryBtn, mainStory);
-toggleStory(story1Btn, story1);
-toggleStory(story2Btn, story2);
-toggleStory(story3Btn, story3);
+// toggleStory(mainStoryBtn, mainStory);
+// toggleStory(story1Btn, story1);
+// toggleStory(story2Btn, story2);
+// toggleStory(story3Btn, story3);
 
 //++Static Hero Text
 const staticHero = getById('static-hero-text');

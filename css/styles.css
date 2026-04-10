@@ -440,7 +440,6 @@ q {
 
 .story-content-wrapper {
 	flex-direction: column;
-	outline: var(--ol);
 	justify-content: space-evenly;
 	row-gap: 15px;
 }
